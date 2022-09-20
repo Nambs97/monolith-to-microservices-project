@@ -17,6 +17,13 @@ spec:
       containers:
       - name: frontend
         image: nambs97/udagram-frontend
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
         ports:
         - containerPort: 8100
         env:

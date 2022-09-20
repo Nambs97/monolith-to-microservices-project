@@ -17,8 +17,15 @@ spec:
       containers:
       - name: backend-feed
         image: nambs97/udagram-api-feed
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         env:
           - name: POSTGRES_USERNAME
             valueFrom:
