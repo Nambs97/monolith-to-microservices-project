@@ -19,13 +19,9 @@ spec:
         image: nambs97/udagram-frontend
         resources:
           requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "1024Mi"
-            cpu: "500m"
+            cpu: 500m
         ports:
-        - containerPort: 8100
+        - containerPort: 80
         env:
           - name: POSTGRES_USERNAME
             valueFrom:
